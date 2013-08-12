@@ -1,0 +1,171 @@
+/*****************************************************************************/
+/*
+/* Global
+/*
+/*****************************************************************************/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #FFF;
+  font: 15px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 1em;
+  line-height: 1.2em;
+}
+
+p { margin: 1em 0; }
+
+a {
+  color: #0c0;
+  text-decoration: none;
+  transition: color .15s ease-in-out;
+  -moz-transition: color .15s ease-in-out;
+  -webkit-transition: color .15s ease-in-out;
+}
+
+a:hover {
+  color: #000;
+}
+
+div.highlight {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #ddd;
+  margin: 1em 0;
+  padding: 6px 10px;
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
+div.highlight code, pre {
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+div.highlight pre {
+  font-size: 13px;
+  line-height: 19px;
+}
+
+/*****************************************************************************/
+/*
+/* Site
+/*
+/*****************************************************************************/
+
+.site {
+  font-size: 115%;
+  text-align: left;
+  width: 90%;
+  max-width: 50em;
+  margin: 3em auto 2em;
+  line-height: 1.5em;
+}
+
+.site .header svg {
+  width: 3em;
+  height: 3em;
+  margin-bottom: 1em;
+}
+
+.site .header a {
+  fill: #000;
+}
+
+.site .header a:hover {
+  fill: #0c0;
+}
+
+.site .meta {
+  color: #aaa;
+}
+
+.site .footer {
+  font-size: 80%;
+  color: #666;
+  border-top: 4px solid #eee;
+  margin-top: 2em;
+  overflow: hidden;
+}
+
+.site .footer .contact {
+  float: left;
+  margin-right: 3em;
+}
+
+.site .footer .contact a {
+  color: #8085C1;
+}
+
+.site .footer .rss {
+  margin-top: 1.1em;
+  margin-right: -.2em;
+  float: right;
+}
+
+.site .footer .rss img {
+  border: 0;
+}
+
+/*****************************************************************************/
+/*
+/* Home
+/*
+/*****************************************************************************/
+
+.site .intro .good {
+  color: #0c0;
+}
+
+.site .intro .bad {
+  color: #c66;
+}
+
+.site .intro {
+  margin-bottom: 1em;
+  font: 13.34px "HelveticaNeue-Light", Helvetica, Arial, sans-serif;
+  font-size: 1.5em;
+  line-height: 1.5em;
+  text-align: left;
+}
+
+.site .intro p {
+  margin: 0.5em 0;
+}
+
+ul.posts {
+  list-style-type: none;
+  margin-bottom: 2em;
+}
+
+ul.posts li {
+  line-height: 1.75em;
+}
+
+ul.posts span {
+  color: #aaa;
+  font-family: Monaco, "Courier New", monospace;
+  font-size: 80%;
+}
+
+/*****************************************************************************/
+/*
+/* Posts
+/*
+/*****************************************************************************/
+
+.post h1, h2 {
+  margin: 0.5em 0;
+  line-height: 1.1em;
+}
+
+.post ul, .post ol {
+  margin-left: 1.35em;
+}

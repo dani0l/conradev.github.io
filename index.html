@@ -1,0 +1,18 @@
+---
+layout: default
+title: Your New Jekyll Site
+---
+
+<div id="home">
+  <div class="intro">
+  	<p>I'm Conrad Kramer.</p>
+  	<p>I'm a freelance <span class="good">developer</span> and <span class="bad">hacker</span>.</p>
+  	<p>I like <span class="good">making</span> things, but I also like <span class="bad">breaking</span> them.</p>
+  	<p>I specialize in iOS and mobile.</p>
+  </div>
+  <ul class="posts">
+    {% for post in site.posts %}
+      <li><a href="{{ post.url }}">{{ post.title }}</a><span class="date">{{ post.date | date_to_string }}</date></li>
+    {% endfor %}
+  </ul>
+</div>
