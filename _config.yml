@@ -2,7 +2,7 @@ name: Conrad Kramer
 pygments: true
 safe: true
 lsi: false
-exclude: Gemfile, Gemfile.lock
+exclude: [ "Gemfile", "Gemfile.lock" ]
 markdown: redcarpet
 redcarpet:
     extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript", "with_toc_data"]
