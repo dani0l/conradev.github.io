@@ -6,13 +6,13 @@ tags:
 
 This is a guide to get a Flask website up and running on Ubuntu 12.04 LTS using nginx and uWSGI. There are [many routes](http://me.veekun.com/blog/2012/05/05/python-faq-webdev/) to take when it comes to Python on the web; this just is my personal favorite. Some people enjoy configuring servers, while others view it as a chore. Regardless, this guide should get you up, running, and ready to make something awesome in no time!
 
-# Installation
+## Installation
 
-## nginx
+### nginx
 
 To install nginx you first need to add the repository. Add the following to `/etc/apt/sources.list.d/nginx-lucid.list` :
 
-```
+``` bash
 deb http://nginx.org/packages/ubuntu/ lucid nginx
 deb-src http://nginx.org/packages/ubuntu/ lucid nginx
 ```
@@ -32,7 +32,7 @@ apt-get update
 apt-get install nginx
 ```
 
-## uWSGI
+### uWSGI
 
 You can use pip to install the latest version of uWSGI by doing the following:
 
@@ -83,7 +83,7 @@ sudo logrotate -f /etc/logrotate.d/uwsgi
 
 It is okay if there is an error with the postrotate script. uWSGI cannot be restarted because it is not currently running.
 
-## virtualenv
+### virtualenv
 
 Using virtualenv is a good idea because it compartmentalizes the environment of your application. To install virtualenv, you can use pip:
 
@@ -91,9 +91,9 @@ Using virtualenv is a good idea because it compartmentalizes the environment of 
 sudo pip install virtualenv
 ```
 
-# Configuration
+## Configuration
 
-## Flask
+### Flask
 
 Now to set up the website! In this case, the website is going to be called 'helloworld' and it is going to be set up in `/srv/www/helloworld`. Feel free to change it, just adjust these instructions accordingly.
 
@@ -146,7 +146,7 @@ sudo chown -R $USER:nginx /srv/www/helloworld
 sudo chmod -R g+w /srv/www/helloworld
 ```
 
-## Nginx
+### Nginx
 
 The final step is to configure nginx. First, remove the default configuration file:
 
@@ -183,7 +183,7 @@ server {
 }
 ```
 
-## Running it
+### Running it
 
 Now that you have successfully configured your website, you can run it using:
 
@@ -192,17 +192,17 @@ sudo service uwsgi restart
 sudo service nginx restart
 ```
 
-# Extensions
+## Extensions
 
-## Flask
+### Flask
 
 Flask is fantastic because it is very extensible. Check out the [documentation](http://flask.pocoo.org/docs/) to get started.
 
-## More Websites!
+### More Websites!
 
 It is really easy to add more websites to this configuration. Simply create a new application directory, set it up, and create a second nginx configuration. uWSGI is configured to be in virtualhost mode, so it can handle multiple websites at once.
 
-## Portability
+### Portability
 
 You can also use uWSGI as an http server, for testing purposes. If you have a copy of your website checked out in the current directory, you can run
 
@@ -212,4 +212,4 @@ uwsgi --http 127.0.0.1:9090 --pyhome ./env --module application --callable app
 
 and uWSGI will create a HTTP server hosting your application on port 9090. This is incredibly useful for development.
 
-Discuss on Hacker News [here](http://news.ycombinator.com/item?id=3937691)
+Discuss on Hacker News [here](http://news.ycombinator.com/item?id=3937691).
