@@ -40,7 +40,9 @@ Once I knew the basic structure of the PhotoLibrary framework, I was able to wor
 
 Thanks to Apple’s straightforward [media capture API](https://developer.apple.com/library/ios/#documentation/AudioVideo/Conceptual/AVFoundationPG/Articles/04_MediaCapture.html) in AVFoundation, it is easy to add arbitrary outputs to a capture session. All I needed to do was create an instance of my class, and add the video data output to the session in the camera controller, and just like that, I was recognizing QR codes. The implementation was just as straightforward as the idea. I made something to read QR codes, and quite simply added it into the Camera. Don’t believe me? Check out the [source code](https://github.com/conradev/QuickQR)! I also made a video, demonstrating the tweak in action:
 
-<iframe width="560" height="315" src="http://www.youtube.com/embed/HQNB9XZdPCk" frameborder="0" allowfullscreen></iframe><br/>
+<div class="video">
+    <iframe src="http://www.youtube.com/embed/HQNB9XZdPCk" frameborder="0" allowfullscreen></iframe>
+</div>
 
 If you are interested in tweaking iOS, be sure to check out my previous [blog post](http://kramerapps.com/blog/post/38090565883/integrate-cloud-print-ios) for a more in-depth discussion. Feel free to [follow me](http://twitter.com/conradev) on Twitter or check out my [software](http://kramerapps.com). Additionally, if your company is hiring mobile dev interns this upcoming summer, and has no inhibitions hiring a high school student, be sure to [get in touch](conrad@kramerapps.com).
 
